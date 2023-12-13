@@ -53,7 +53,7 @@ export default function UploadForm() {
     }
 
     return (
-        <form action={handleUpload} ref={formRef}>
+        <form onSubmit={handleUpload} ref={formRef}>
             <div className='bg-[#1111   ]'>
                 <input type="file" accept='image/' multiple onChange={handleInputFiles} />
 
@@ -63,6 +63,7 @@ export default function UploadForm() {
                     {files.map((file, index) => (
                         <RasmCard key={index} url={URL.createObjectURL(file)} onClick={() => handleDelete(index)} />
                     ))}
+
                 </div>
 
             </div>
