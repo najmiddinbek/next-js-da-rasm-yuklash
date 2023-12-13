@@ -3,10 +3,8 @@ import React from 'react'
 import { getAllPhotos } from '../../actions/uploadAction'
 import Rasmlar from '@/components/Rasmlar'
 
-export default async function page() {
+export default async function Home() {
   const photos = await getAllPhotos()
-
-  console.log(photos)
 
 
   return (
